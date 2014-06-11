@@ -22,7 +22,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: pg
+  adapter: mysql2
   database: thebrownbook_production
+  username: root
+  password: root
+  port: 3306
   pool: 5
   timeout: 5000
