@@ -1,0 +1,228 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= stub style3
+ *= stub style5
+ */
+
+@font-face {
+    font-family: "Dense";
+    font-style: normal;
+    font-weight: normal;
+    src: url("Dense-Regular.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Raleway-ExtraLight";
+    font-style: normal;
+    font-weight: normal;
+    src: url("Raleway/Raleway-ExtraLight.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Raleway-Light";
+    font-style: normal;
+    font-weight: normal;
+    src: url("Raleway/Raleway-Light.otf") format("woff");
+}
+
+
+#top-nav {
+	width: 100%;
+	height: 95px;
+	margin-bottom: 10px;
+    opacity: 0.8;
+	background: url('/assets/bg2.png') -100px 0;
+}
+
+#nav-logo {
+    /*background-image: url('/assets/bg-pattern.jpg');*/
+    height: 170px;
+    margin: 0 60px;
+    position: relative;
+    top: -40px;
+    width: 170px;
+    opacity: 0.98;
+    /*background-color: #8A0808;*/
+}
+
+#nav-logo h4{
+    color: white;
+    font-family: 'Monika',Serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#nav-logo .first {
+    margin-right: 10px;
+    padding-top: 60px;
+}
+
+#menu-wrapper {
+    float: right;
+    opacity: 1;
+    position: absolute;
+    right: 100px;
+    top: 20px;
+}
+
+#title-wrap {
+    opacity: 1;
+    position: absolute;
+    left: 200px;
+    top: 25px;
+    font-family: 'Dense',Serif;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 5px;
+}
+
+#menu {
+    cursor: pointer;    
+}
+
+.rotate {
+	transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}
+
+.clear {
+    clear: both;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+#info-wrap {
+    
+    text-align: left;    
+}
+
+.hint-text {
+    font-size: 19px;
+    line-height: 1;
+    color: gray;
+}
+
+.page-header {
+    font-family: 'Dense',Serif;
+    font-size: 50px;
+    margin: 20px 50px;
+    text-align: center;
+    line-height: 1;
+    height: 55px;
+    color: #2C3E50;
+    border-bottom: 1px solid lightgray;
+}
+
+.section-menu a {
+    background: none repeat scroll 0 0 rgba(41, 77, 95, 0.1);
+    border-radius: 3px 3px 3px 3px;
+    color: #34495E;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 2px 8px;
+    margin-bottom: 15px;
+    transition: all 0.2s linear 0s;
+}
+
+.section-menu a.current, .section-menu a.current:hover, .section-menu a:hover {
+    background: none repeat scroll 0 0 rgba(41, 77, 95, 0.3);
+}
+
+a {
+    text-decoration: none;
+}
+
+figcaption h4 {
+    font-family: 'Raleway-ExtraLight', Serif;
+    font-size: 25px;
+}
+
+.separator {
+    border-right: 1px solid gray;
+    margin: 15px;
+    height: 60px;
+}
+
+.info-card {
+    width: 100%;
+    background-color: #ECF0F1;
+}
+
+.card-tip {
+    width: 100%;
+    height: 5px;
+    background-color: #1ABC9C;  
+}
+
+.card-head {
+    font-family: 'Raleway-Light', Serif;
+    font-size: 21px;
+    text-align: left;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin: 10px;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid lightgray;
+}
+
+.card-body {
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.light-box {
+    width: 660px;
+    height: 450px;
+    background-color: white;
+    border: 2px solid slategray;
+    padding: 5px;
+}
+
+.lb-head {
+    font-family: 'Raleway-ExtraLight', Serif;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 25px 40px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.lb-body {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.lb-img {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+}

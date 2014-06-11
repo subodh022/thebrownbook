@@ -1,0 +1,74 @@
+<%= render :partial => 'top_nav', :locals => {:title => 'PUPILS'} %>
+<div class="clear"></div>
+<div class="page-header">
+	<div>
+		<span class="section-menu left">
+			<a class="current" href="#">The Geeks</a>
+			<a href="#">The Doctors</a>
+			<a href="#">The Economists</a>
+		</span>
+		<div class="clear"></div>
+		<span class="hint-text right" >Click on A Card to See More</span>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div id="grid-gallery" class="grid-gallery">
+		<section class="grid-wrap">
+			<ul class="grid">
+				<li class="grid-sizer"></li><!-- for Masonry column width -->
+				<% @folks.each do |folk| %>
+					<li>
+						<figure>
+							<!-- <img src="/assets/thumb/<%= ['m','f'].sample %>1.jpg" alt="img01"/> -->
+							<div class="info-card">
+								<div class="card-tip" style="background-color: <%= CARD_COLORS.sample %>"></div>
+								<div class="card-head">
+									<%= folk.name %>
+								</div>
+								<div class="card-body">
+									<%= folk.desc.first((150..200).to_a.sample) + " ..." %>
+								</div>
+							</div>
+							<!-- <figcaption><h4><%= folk.name.upcase %></h4><p></p></figcaption> -->
+						</figure>
+					</li>
+				<% end %>
+			</ul>
+		</section>
+		<section class="slideshow">
+			<ul>
+				<% @folks.each do |folk| %>
+					<li>
+						<div class="light-box">
+							<div class="lb-img left">
+								<img src="/assets/thumb/<%= ['m','f'].sample %>1.jpg" height="440px" alt="img01"/>
+							</div>
+							<div class="right" style="width: 55%">
+								<div class="lb-head">
+									<%= folk.name %>
+								</div>
+								<div class="lb-body">
+									<%= folk.desc.first((150..200).to_a.sample) + " ..." %>
+								</div>
+							</div>
+						</div>
+					</li>
+				<% end %>
+			</ul>
+			<nav>
+				<span class="icon nav-prev"></span>
+				<span class="icon nav-next"></span>
+				<span class="icon nav-close"></span>
+			</nav>
+			<div class="info-keys icon">Navigate with arrow keys</div>
+		</section><!-- // slideshow -->
+	</div><!-- // grid-gallery -->
+</div>
+<script src="/assets/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/masonry.pkgd.min.js"></script>
+<script src="/assets/classie.js"></script>
+<script src="/assets/cbpGridGallery.js"></script>
+<script>
+	new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+</script>
